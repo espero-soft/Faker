@@ -30,7 +30,7 @@ $faker = new EsperoSoft\Faker\Faker();
 // generate data by calling methods
 echo $faker->image();
 // 'https://pixabay.com/get/g9ac286be168cbd296471da1_1280.jpg'
-echo $faker->email();
+echo $faker->video();
 // 'https://cdn.pixabay.com/vimeo/565144818/Stream%20-%2078213.mp4?width=3840&hash=d05acb913345b3b873b01121453acbf275b18796'
 $origin = new DateTimeImmutable('16-09-1989 13:00:10');
 echo $faker->fromNow($origin)."\n"; // 33 years ago
