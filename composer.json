@@ -16,6 +16,7 @@
             "EsperoSoft\\Faker\\": "src/Faker"
         }
     },
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Espero-Soft Informatiques",
