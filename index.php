@@ -36,3 +36,9 @@ $faker = new Faker();
 //     # code...
 //     echo $faker->phone()."\n";
 // }
+// for ($i=0; $i < 100; $i++) { 
+//     # code...
+// }
+echo $faker->codepostal()."\n";
+echo $faker->streetAddress()."\n";
+echo $faker->text()."\n";

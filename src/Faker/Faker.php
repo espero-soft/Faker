@@ -3,9 +3,12 @@ namespace EsperoSoft\Faker;
 
 use EsperoSoft\Library\CityData;
 use EsperoSoft\Library\NameData;
+use EsperoSoft\Library\TextData;
 use EsperoSoft\Library\EmailData;
 use EsperoSoft\Library\PhoneData;
 use EsperoSoft\Library\CountryData;
+use EsperoSoft\Library\CodePostalData;
+use EsperoSoft\Library\StreetAddressData;
 
 class Faker {
 
@@ -18,6 +21,8 @@ class Faker {
     private $nameData;
     private $emailData;
     private $phoneData;
+    private $codePostalData;
+    private $streetAddressData;
 
     public function __construct(){
         
@@ -95,6 +100,26 @@ class Faker {
         }
         return $this->videos[rand(0,$this->videosLength - 1)];
     }
+    public function text($min_size=1, $max_size=3){
+        $paragraph = "";
+        $textData = new TextData();
+        for ($i=0; $i < rand($min_size, $max_size); $i++) { 
+            $paragraph .= $textData->paragraph(); 
+        }
+        return $paragraph;
+    }
+    public function sentence(){
+        return (new TextData())->sentence();
+    }
+    public function sentences(){
+        return (new TextData())->sentences();
+    }
+    public function paragraph(){
+        return (new TextData())->paragraph();
+    }
+    public function paragraphs(){
+        return (new TextData())->paragraphs();
+    }
     public function name(){
         if(!$this->nameData){
             $this->nameData = new NameData();
@@ -124,6 +149,18 @@ class Faker {
             $this->countryData = new CountryData();
         }
         return $this->countryData->getCountry();
+    }
+    public function streetAddress(){
+        if(!$this->streetAddressData){
+            $this->streetAddressData = new StreetAddressData();
+        }
+        return $this->streetAddressData->getStreetAddress();
+    }
+    public function codePostal(){
+        if(!$this->codePostalData){
+            $this->codePostalData = new CodePostalData();
+        }
+        return $this->codePostalData->CodePostal();
     }
 
     static public function dateDiff($date1, $date2){

@@ -63,6 +63,10 @@ for ($i=0; $i < 100; $i++) {
     echo $faker->phone()."\n";
 }
 
+echo $faker->codepostal()."\n";
+echo $faker->streetAddress()."\n";
+echo $faker->text()."\n";
+
 
 // Date
 $origin = new DateTimeImmutable('16-09-1989 13:00:10');
