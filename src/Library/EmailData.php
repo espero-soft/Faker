@@ -13,7 +13,11 @@ class EmailData{
      */
     public function getEmail()
     {
-        return $this->email[rand(0,count($this->email)-1)]["email"];
+        $round = rand(0,count($this->email)-1);
+        $email = $this->email[$round]["email"];
+        unset($this->email[$round]);
+        
+        return $email;
     }
 
 }
