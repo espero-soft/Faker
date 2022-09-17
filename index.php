@@ -28,10 +28,10 @@ $faker = new Faker();
 //     # code...
 //     echo $faker->lastname()."\n";
 // }
-// for ($i=0; $i < 100; $i++) { 
-//     # code...
-//     echo $faker->email()."\n";
-// }
+for ($i=0; $i < 100; $i++) { 
+    # code...
+    echo $faker->email()."\n";
+}
 // for ($i=0; $i < 100; $i++) { 
 //     # code...
 //     echo $faker->city()."\n";
