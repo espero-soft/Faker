@@ -162,6 +162,12 @@ class Faker {
         }
         return $this->codePostalData->CodePostal();
     }
+    public function dateTime($days = 6000){
+        return new \DateTime("-".rand(0, $days)." days ".rand(0, 23)." hour ".rand(0, 59)." minute");
+    }
+    public function dateTimeImmutable($days = 6000){
+        return new \DateTimeImmutable("-".rand(0, $days)." days ".rand(0, 23)." hour ".rand(0, 59)." minute");
+    }
 
     static public function dateDiff($date1, $date2){
         

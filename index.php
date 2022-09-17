@@ -39,6 +39,14 @@ $faker = new Faker();
 // for ($i=0; $i < 100; $i++) { 
 //     # code...
 // }
-echo $faker->codepostal()."\n";
-echo $faker->streetAddress()."\n";
-echo $faker->text()."\n";
+// echo $faker->codepostal()."\n";
+// echo $faker->streetAddress()."\n";
+// echo $faker->text()."\n";
+// for ($i=0; $i < 100; $i++) { 
+//     # code...
+//     echo $faker->dateTime(3000)->format("Y-m-d H:i:s")."\n";
+// }
+for ($i=0; $i < 100; $i++) { 
+    # code...
+    echo $faker->dateTimeImmutable(3000)->format("Y-m-d H:i:s")."\n";
+}
