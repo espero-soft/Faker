@@ -101,5 +101,5 @@ echo $faker->fromNow($origin)."\n"; // 33 years ago
 
 ## License
 
-Faker is released under the MIT License. See [`LICENSE`](LICENSE) for details.
+Faker is released under the MIT License. 
 
