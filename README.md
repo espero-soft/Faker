@@ -11,7 +11,7 @@ It's heavily inspired by Perl's [Data::Faker](https://metacpan.org/pod/Data::Fak
 Faker requires PHP >= 7.1.
 
 ```shell
-composer require EsperoSoft/faker:dev-master
+composer require espero-soft/faker:dev-master
 ```
 
 ### Documentation
