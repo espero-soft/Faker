@@ -11,7 +11,7 @@ use EsperoSoft\Library\FullNameData;
 use EsperoSoft\Library\CodePostalData;
 use EsperoSoft\Library\StreetAddressData;
 
-class Faker {
+class Faker extends TextData{
 
     private $imagesLength = 0;
     private $videosLength = 0;
@@ -101,25 +101,14 @@ class Faker {
         }
         return $this->videos[rand(0,$this->videosLength - 1)];
     }
-    public function text($min_size=1, $max_size=3){
+    public function text($min_size=1, $max_size= 3){
+        $max_size = $max_size < $min_size ? $min_size +2 :$max_size; 
         $paragraph = "";
         $textData = new TextData();
         for ($i=0; $i < rand($min_size, $max_size); $i++) { 
             $paragraph .= $textData->paragraph(); 
         }
         return $paragraph;
-    }
-    public function sentence(){
-        return (new TextData())->sentence();
-    }
-    public function sentences(){
-        return (new TextData())->sentences();
-    }
-    public function paragraph(){
-        return (new TextData())->paragraph();
-    }
-    public function paragraphs(){
-        return (new TextData())->paragraphs();
     }
     public function name(){
         if(!$this->nameData){

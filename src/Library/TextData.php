@@ -110,6 +110,30 @@ class TextData{
     {
         return strval($this->paragraphs(1, $tags));
     }
+    public function title($length = 60)
+    {
+        $startLength  = 0;
+        $word = $this->words[rand(0,count($this->words))];
+        $result = strtoupper($word[0]).\substr($word, 1); 
+        while (strlen($result) < $length) {
+            $word = $this->words[rand(0,count($this->words))];
+            $result .= " ".$word;
+        }
+        $result .= ".";
+        return strval( $result);
+    }
+    public function description($length = 200)
+    {
+        $startLength  = 0;
+        $word = $this->words[rand(0,count($this->words))];
+        $result = strtoupper($word[0]).\substr($word, 1); 
+        while (strlen($result) < $length) {
+            $word = $this->words[rand(0,count($this->words)-1)];
+            $result .= " ".$word;
+        }
+        $result .= ".";
+        return strval( $result);
+    }
     public function paragraphsArray($count = 1, $tags = false)
     {
         return $this->paragraphs($count, $tags, true);
