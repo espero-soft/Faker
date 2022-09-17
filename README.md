@@ -39,6 +39,30 @@ for ($i=0; $i < 100; $i++) {
     echo $faker->name()."\n";
 }
 
+for ($i=0; $i < 100; $i++) { 
+    # code...
+    echo $faker->firstname()."\n";
+    // Diann
+    // Shaquana
+    // Freddy
+    // Edward
+    // Marinda
+    // Theresa
+}
+
+for ($i=0; $i < 100; $i++) { 
+    # code...
+    echo $faker->lastname()."\n";
+    // Hanh
+    // Cathey
+    // Candi
+    // Yetta
+    // Alexia
+    // Lyla
+    // Chantel
+    // Carole
+}
+
 // Generate Email
 for ($i=0; $i < 100; $i++) { 
     # code...

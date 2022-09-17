@@ -22,6 +22,14 @@ $faker = new Faker();
 // }
 // for ($i=0; $i < 100; $i++) { 
 //     # code...
+//     echo $faker->firstname()."\n";
+// }
+// for ($i=0; $i < 100; $i++) { 
+//     # code...
+//     echo $faker->lastname()."\n";
+// }
+// for ($i=0; $i < 100; $i++) { 
+//     # code...
 //     echo $faker->email()."\n";
 // }
 // for ($i=0; $i < 100; $i++) { 
@@ -42,11 +50,11 @@ $faker = new Faker();
 // echo $faker->codepostal()."\n";
 // echo $faker->streetAddress()."\n";
 // echo $faker->text()."\n";
-for ($i=0; $i < 100; $i++) { 
-    # code...
-    echo $faker->dateTime(3000)->format("Y-m-d H:i:s")."\n";
-}
-for ($i=0; $i < 100; $i++) { 
-    # code...
-    echo $faker->dateTimeImmutable(3000)->format("Y-m-d H:i:s")."\n";
-}
+// for ($i=0; $i < 100; $i++) { 
+//     # code...
+//     echo $faker->dateTime(3000)->format("Y-m-d H:i:s")."\n";
+// }
+// for ($i=0; $i < 100; $i++) { 
+//     # code...
+//     echo $faker->dateTimeImmutable(3000)->format("Y-m-d H:i:s")."\n";
+// }

@@ -7,6 +7,7 @@ use EsperoSoft\Library\TextData;
 use EsperoSoft\Library\EmailData;
 use EsperoSoft\Library\PhoneData;
 use EsperoSoft\Library\CountryData;
+use EsperoSoft\Library\FullNameData;
 use EsperoSoft\Library\CodePostalData;
 use EsperoSoft\Library\StreetAddressData;
 
@@ -161,6 +162,12 @@ class Faker {
             $this->codePostalData = new CodePostalData();
         }
         return $this->codePostalData->CodePostal();
+    }
+    public function firstname(){
+        return (new FullNameData())->getFirstname();
+    }
+    public function lastname(){
+        return (new FullNameData())->getLastname();
     }
     public function dateTime($days = 6000){
         return new \DateTime("-".rand(0, $days)." days ".rand(0, 23)." hour ".rand(0, 59)." minute");
