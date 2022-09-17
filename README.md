@@ -32,6 +32,39 @@ echo $faker->image();
 // 'https://pixabay.com/get/g9ac286be168cbd296471da1_1280.jpg'
 echo $faker->video();
 // 'https://cdn.pixabay.com/vimeo/565144818/Stream%20-%2078213.mp4?width=3840&hash=d05acb913345b3b873b01121453acbf275b18796'
+
+// Generate Name
+for ($i=0; $i < 100; $i++) { 
+    # code...
+    echo $faker->name()."\n";
+}
+
+// Generate Email
+for ($i=0; $i < 100; $i++) { 
+    # code...
+    echo $faker->email()."\n";
+}
+
+// Generate City
+for ($i=0; $i < 100; $i++) { 
+    # code...
+    echo $faker->city()."\n";
+}
+
+// Generate Country
+for ($i=0; $i < 100; $i++) { 
+    # code...
+    echo $faker->country()."\n";
+}
+
+// Generate Phone
+for ($i=0; $i < 100; $i++) { 
+    # code...
+    echo $faker->phone()."\n";
+}
+
+
+// Date
 $origin = new DateTimeImmutable('16-09-1989 13:00:10');
 echo $faker->fromNow($origin)."\n"; // 33 years ago
 
@@ -40,8 +73,3 @@ echo $faker->fromNow($origin)."\n"; // 33 years ago
 
 Faker is released under the MIT License. See [`LICENSE`](LICENSE) for details.
 
-## Backward compatibility promise
-
-PHP 8 introduced [named arguments](https://wiki.php.net/rfc/named_params), which
-increased the cost and reduces flexibility for package maintainers. The names of the
-arguments for methods in Faker is not included in our BC promise.

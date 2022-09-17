@@ -1,16 +1,26 @@
 <?php 
 namespace EsperoSoft\Faker;
 
+use EsperoSoft\Library\CityData;
+use EsperoSoft\Library\NameData;
+use EsperoSoft\Library\EmailData;
+use EsperoSoft\Library\PhoneData;
+use EsperoSoft\Library\CountryData;
+
 class Faker {
 
     private $imagesLength = 0;
     private $videosLength = 0;
     private $images = array();
     private $videos = array();
+    private $cityData;
+    private $countryData;
+    private $nameData;
+    private $emailData;
+    private $phoneData;
 
     public function __construct(){
-        $this->initImages();
-        $this->initVideos();
+        
     }
 
     public function initImages(){
@@ -74,10 +84,46 @@ class Faker {
     }
   
     public function image(){
+        if(empty($this->images)){
+            $this->initImages();
+        }
         return $this->images[rand(0,$this->imagesLength -1 )];
     }
     public function video(){
+        if(empty($this->videos)){
+            $this->initVideos();
+        }
         return $this->videos[rand(0,$this->videosLength - 1)];
+    }
+    public function name(){
+        if(!$this->nameData){
+            $this->nameData = new NameData();
+        }
+        return $this->nameData->getName();
+    }
+    public function email(){
+        if(!$this->emailData){
+            $this->emailData = new EmailData();
+        }
+        return $this->emailData->getEmail();
+    }
+    public function phone(){
+        if(!$this->phoneData){
+            $this->phoneData = new PhoneData();
+        }
+        return $this->phoneData->getPhone();
+    }
+    public function city(){
+        if(!$this->cityData){
+            $this->cityData = new CityData();
+        }
+        return $this->cityData->getCity();
+    }
+    public function country(){
+        if(!$this->countryData){
+            $this->countryData = new CountryData();
+        }
+        return $this->countryData->getCountry();
     }
 
     static public function dateDiff($date1, $date2){
