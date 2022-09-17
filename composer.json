@@ -6,7 +6,7 @@
     "config": {
         "secure-http": false
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "keywords": [
         "faker",
         "fixtures",
