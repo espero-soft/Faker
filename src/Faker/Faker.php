@@ -163,6 +163,12 @@ class Faker {
         }
         return $this->codePostalData->CodePostal();
     }
+    public function postcode(){
+        if(!$this->codePostalData){
+            $this->codePostalData = new CodePostalData();
+        }
+        return $this->codePostalData->CodePostal();
+    }
     public function firstname(){
         return (new FullNameData())->getFirstname();
     }
