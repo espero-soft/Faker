@@ -113,10 +113,10 @@ class TextData{
     public function title($length = 60)
     {
         $startLength  = 0;
-        $word = $this->words[rand(0,count($this->words))];
+        $word = $this->words[rand(0,count($this->words)-1)];
         $result = strtoupper($word[0]).\substr($word, 1); 
         while (strlen($result) < $length) {
-            $word = $this->words[rand(0,count($this->words))];
+            $word = $this->words[rand(0,count($this->words)-1)];
             $result .= " ".$word;
         }
         $result .= ".";
@@ -125,7 +125,7 @@ class TextData{
     public function description($length = 200)
     {
         $startLength  = 0;
-        $word = $this->words[rand(0,count($this->words))];
+        $word = $this->words[rand(0,count($this->words)-1)];
         $result = strtoupper($word[0]).\substr($word, 1); 
         while (strlen($result) < $length) {
             $word = $this->words[rand(0,count($this->words)-1)];
