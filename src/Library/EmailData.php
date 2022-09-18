@@ -19,7 +19,12 @@ class EmailData{
             $round = rand(0,count($this->email)-1);
         }
         $email = $this->email[$round]["email"];
-        unset($this->email[$round]);
+
+        foreach ($this->email as $key => $value) {
+            if($value["email"] == $email){
+                unset($this->email[$key]);
+            }
+        }
 
         return $email;
     }
