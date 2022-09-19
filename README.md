@@ -25,7 +25,7 @@ Use `new EsperoSoft\Faker\Faker()` to create and initialize a Faker generator, w
 ```php
 <?php
 require_once 'vendor/autoload.php';
-// use the factory to create a Faker\Generator instance
+// use the Faker to create a Faker Generator instance
 $faker = new EsperoSoft\Faker\Faker();
 // generate data by calling methods
 echo $faker->image();
