@@ -95,6 +95,52 @@ class Faker extends TextData{
         }
         return $this->images[rand(0,$this->imagesLength -1 )];
     }
+
+    public function generate_name(){
+        $result = "";
+        $code = "az123456789ertyuiopqsdfgh123456789jklmwxcvbn123456789";
+    
+        $index = 1;
+        while ($index <= 15) {
+            $result .= $code[rand(0, 52)];
+            $index ++;
+        }
+        return $result;
+    
+    }
+
+    public function imageUrl($root , $dir="/assets/images/"){
+    
+        $finename = $this->generate_name().".png";
+
+        $root_dir = $root.$dir.$finename;
+        
+        if(empty($this->images)){
+            $this->initImages();
+        }
+        $image_url =  $this->images[rand(0,$this->imagesLength -1 )];
+
+        file_put_contents($root_dir, file_get_contents($image_url));
+
+        return $dir.$finename;
+    }
+    public function videoUrl($root , $dir="/assets/videos/"){
+    
+        $finename = $this->generate_name().".mp4";
+
+        $root_dir = $root.$dir.$finename;
+        
+        if(empty($this->videos)){
+            $this->initVideos();
+        }
+        $video_url =  $this->videos[rand(0,$this->videosLength -1 )];
+
+        file_put_contents($root_dir, file_get_contents($video_url));
+
+        return $dir.$finename;
+    }
+
+
     public function video(){
         if(empty($this->videos)){
             $this->initVideos();
@@ -111,6 +157,12 @@ class Faker extends TextData{
         return $paragraph;
     }
     public function name(){
+        if(!$this->nameData){
+            $this->nameData = new NameData();
+        }
+        return $this->nameData->getName();
+    }
+    public function full_name(){
         if(!$this->nameData){
             $this->nameData = new NameData();
         }
