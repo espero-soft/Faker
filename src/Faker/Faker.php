@@ -96,12 +96,12 @@ class Faker extends TextData{
         return $this->images[rand(0,$this->imagesLength -1 )];
     }
 
-    public function generate_name(){
+    public function generate_name($length = 15){
         $result = "";
         $code = "az123456789ertyuiopqsdfgh123456789jklmwxcvbn123456789";
     
         $index = 1;
-        while ($index <= 15) {
+        while ($index <= $length) {
             $result .= $code[rand(0, 52)];
             $index ++;
         }
@@ -141,6 +141,9 @@ class Faker extends TextData{
     }
 
 
+    public function id(){
+        return $this->generate_name(20);
+    }
     public function video(){
         if(empty($this->videos)){
             $this->initVideos();

@@ -62,7 +62,7 @@ $faker = new Faker();
 
 
 for ($i=0; $i < 5; $i++) { 
-    echo $faker->imageUrl(__DIR__, $file_directory="/assets/images/")."\n";
+    // echo $faker->imageUrl(__DIR__, $file_directory="/assets/images/")."\n";
     // /assets/images/1l18wgbt16m1cb9.png
     // /assets/images/46tgvy22f9nwh8b.png
     // /assets/images/hszf5h8z973x4uz.png
@@ -70,7 +70,7 @@ for ($i=0; $i < 5; $i++) {
     // /assets/images/s41qo8zlh8f44g6.png
 }
 for ($i=0; $i < 5; $i++) { 
-    echo $faker->videoUrl(__DIR__, $file_directory="/assets/videos/")."\n";
+    // echo $faker->videoUrl(__DIR__, $file_directory="/assets/videos/")."\n";
     // /assets/videos/fh9g7io6r8govm5.mp4
     // /assets/videos/587343bo1244hb6.mp4
     // /assets/videos/l3z21dz4twtw3p5.mp4
@@ -80,7 +80,7 @@ for ($i=0; $i < 5; $i++) {
 
 for ($i=0; $i < 100; $i++) { 
     # code...
-    echo $faker->name()."\n";
+    echo $faker->id()."\n";
 }
 
 
