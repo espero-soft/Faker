@@ -27,7 +27,20 @@ Use `new EsperoSoft\Faker\Faker()` to create and initialize a Faker generator, w
 require_once 'vendor/autoload.php';
 // use the Faker to create a Faker Generator instance
 $faker = new EsperoSoft\Faker\Faker();
-// generate data by calling methods
+
+
+// generate unique Id
+for ($i=0; $i < 5; $i++) { 
+    # code...
+    echo $faker->id()."\n";
+    // x7mk3p9i4j48ek3d98b5
+    // w139191mu2ds49lgg3wt
+    // a4fdm8n761r96zsb53g3
+    // 271k1527v353v1917r8b
+    // cpjuf3ph57hoaa5b13u7
+}
+
+// generate image URL
 echo $faker->image();
 // 'https://pixabay.com/get/g9ac286be168cbd296471da1_1280.jpg'
 

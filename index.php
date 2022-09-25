@@ -78,9 +78,14 @@ for ($i=0; $i < 5; $i++) {
     // /assets/videos/lc417fz4c52ihzl.mp4
 }
 
-for ($i=0; $i < 100; $i++) { 
+for ($i=0; $i < 5; $i++) { 
     # code...
     echo $faker->id()."\n";
+    // x7mk3p9i4j48ek3d98b5
+    // w139191mu2ds49lgg3wt
+    // a4fdm8n761r96zsb53g3
+    // 271k1527v353v1917r8b
+    // cpjuf3ph57hoaa5b13u7
 }
 
 
