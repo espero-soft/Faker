@@ -27,7 +27,7 @@ To get started with Faker, create a Faker generator instance and use its methods
 require_once 'vendor/autoload.php';
 use EsperoSoft\Faker\Faker;
 
-$faker = Faker::create();
+$faker = new Faker();
 
 // Generate a unique ID
 for ($i = 0; $i < 5; $i++) {

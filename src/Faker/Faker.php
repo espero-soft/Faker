@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 namespace EsperoSoft\Faker;
 
 use EsperoSoft\Library\CityData;
@@ -11,12 +12,18 @@ use EsperoSoft\Library\FullNameData;
 use EsperoSoft\Library\CodePostalData;
 use EsperoSoft\Library\StreetAddressData;
 
-class Faker extends TextData{
-
+/**
+ * Faker is a PHP library that generates fake data.
+ */
+class Faker extends TextData
+{
+    // Properties to store image and video data
     private $imagesLength = 0;
     private $videosLength = 0;
-    private $images = array();
-    private $videos = array();
+    private $images = [];
+    private $videos = [];
+
+    // Data objects for various types of data
     private $cityData;
     private $countryData;
     private $nameData;
@@ -25,8 +32,12 @@ class Faker extends TextData{
     private $codePostalData;
     private $streetAddressData;
 
-    public function __construct(){
-        
+    /**
+     * Constructor for Faker class.
+     */
+    public function __construct()
+    {
+        // Initialize data objects here if needed
     }
 
     public function initImages(){
