@@ -176,11 +176,25 @@ class Faker extends TextData
         }
         return $this->nameData->getName();
     }
+    public function names($count = 5){
+        $results = [];
+        for ($i=0; $i < $count; $i++) { 
+            $results[] = $this->name();
+        }
+        return $results;
+    }
     public function full_name(){
         if(!$this->nameData){
             $this->nameData = new NameData();
         }
         return $this->nameData->getName();
+    }
+    public function full_names($count = 5){
+        $results = [];
+        for ($i=0; $i < $count; $i++) { 
+            $results[] = $this->full_name();
+        }
+        return $results;
     }
     public function email(){
         if(!$this->emailData){
@@ -188,11 +202,25 @@ class Faker extends TextData
         }
         return $this->emailData->getEmail();
     }
+    public function emails($count = 5){
+        $results = [];
+        for ($i=0; $i < $count; $i++) { 
+            $results[] = $this->email();
+        }
+        return $results;
+    }
     public function phone(){
         if(!$this->phoneData){
             $this->phoneData = new PhoneData();
         }
         return $this->phoneData->getPhone();
+    }
+    public function phones($count = 5){
+        $results = [];
+        for ($i=0; $i < $count; $i++) { 
+            $results[] = $this->phone();
+        }
+        return $results;
     }
     public function city(){
         if(!$this->cityData){
@@ -200,11 +228,25 @@ class Faker extends TextData
         }
         return $this->cityData->getCity();
     }
+    public function cities($count = 5){
+        $results = [];
+        for ($i=0; $i < $count; $i++) { 
+            $results[] = $this->city();
+        }
+        return $results;
+    }
     public function country(){
         if(!$this->countryData){
             $this->countryData = new CountryData();
         }
         return $this->countryData->getCountry();
+    }
+    public function countries($count = 5){
+        $results = [];
+        for ($i=0; $i < $count; $i++) { 
+            $results[] = $this->country();
+        }
+        return $results;
     }
     public function streetAddress(){
         if(!$this->streetAddressData){
@@ -227,8 +269,22 @@ class Faker extends TextData
     public function firstname(){
         return (new FullNameData())->getFirstname();
     }
+    public function firstnames($count = 5){
+        $results = [];
+        for ($i=0; $i < $count; $i++) { 
+            $results[] = $this->firstname();
+        }
+        return $results;
+    }
     public function lastname(){
         return (new FullNameData())->getLastname();
+    }
+    public function lastnames($count = 5){
+        $results = [];
+        for ($i=0; $i < $count; $i++) { 
+            $results[] = $this->lastname();
+        }
+        return $results;
     }
     public function dateTime($days = 6000){
         return new \DateTime("-".rand(0, $days)." days ".rand(0, 23)." hour ".rand(0, 59)." minute");
